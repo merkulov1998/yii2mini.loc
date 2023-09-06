@@ -20,12 +20,14 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
+        'theme.css',
     ];
     public $js = [
+        'https://unpkg.com/vue@next',
+        'app.js',
     ];
     public $depends = [
-        'yii\web\YiiAsset',
+        //'yii\web\YiiAsset',
         'yii\bootstrap5\BootstrapAsset'
     ];
 }
