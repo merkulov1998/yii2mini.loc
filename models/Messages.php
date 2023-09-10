@@ -19,13 +19,18 @@ class Messages extends ActiveRecord
             [['id_cafe'], 'integer'],
         ];
     }
-
+/*
     public function attributeLabels()
     {
         return [
             'id' => 'ID',
-            'text' => 'Text',
-            'id_cafe' => 'Cafe ID',
+            'text' => 'Текст сообщения',
+            'id_cafe' => 'ID кафе',
         ];
+    }
+    */
+    public function getCafe()
+    {
+        return $this->hasOne(Cafe::class, ['id_cafe' => 'id_cafe']);
     }
 }
